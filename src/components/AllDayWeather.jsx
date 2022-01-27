@@ -7,7 +7,10 @@ const AllDayWeather = (weatherData) => {
 
   let todayConvert =  new Date(today.getTime() - today.getTimezoneOffset() * 60 * 1000).toISOString().split('T')[0]
   return (
-    <div >
+    <div className="dailyWeather">
+        <span className="spanFont">
+            <strong>Daily</strong> Weather
+          </span>
       {Object.keys(allDayWeather).length > 0 && (
         <div className="allDayWeather">
           {allDayWeather.list.map((day, key) => {
